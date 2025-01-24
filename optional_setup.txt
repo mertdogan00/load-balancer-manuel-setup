@@ -46,7 +46,7 @@ server {
 
 # 🛠️ Step 3: Create Backend SSL Certificate (Optional, For Self-Signed Certificates)
 sudo mkdir -p /etc/nginx/ssl
-openssl req -nodes -new -x509 -keyout /etc/nginx/ssl/backend.key -out /etc/nginx/ssl/backend.crt -days 365
+openssl req -nodes -new -x509 -keyout /etc/nginx/ssl/backend.key -out /etc/nginx/ssl/backend.crt -days 5475
 
 # Fill in the required fields during certificate generation:
 # Country Name, State/Province, City, Organization Name, Common Name (Domain, e.g., backend.example.com)
