@@ -34,6 +34,11 @@ server {
     ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
 
+    # Custom log files 📂
+    access_log /var/log/nginx/example.access.log;    # Access logs for this domain
+    error_log /var/log/nginx/example.error.log;      # Error logs for this domain
+
+
     # Forward traffic to backend servers 🔀
     location / {
         proxy_pass http://example_backend;
