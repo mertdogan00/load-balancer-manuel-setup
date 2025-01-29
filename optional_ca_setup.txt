@@ -26,9 +26,9 @@ server {
     listen 443 ssl;  # Enable SSL on port 443
     server_name example.com www.example.com;  # Define the domain names
 
-   # Loglar için ayrı dosyalar
-    access_log /var/log/nginx/access.log main;
-    error_log /var/log/nginx/error.log warn;
+    # specific logs
+    access_log /var/log/nginx/example.log main;
+    error_log /var/log/nginx/example_error.log warn;
 
     # SSL Certificates (from Let's Encrypt or a custom CA)
     ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;  # Path to the SSL certificate
