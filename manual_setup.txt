@@ -65,6 +65,7 @@ sudo systemctl reload nginx  # Reload NGINX to apply changes
 # 🔒 4. Obtain SSL Certificate with Certbot
 sudo certbot --nginx -d example.com -d www.example.com  # Automatically configure SSL
 sudo certbot certonly --nginx -d example.com -d www.example.com # Manuel Configure SSL
+sudo certbot certonly --webroot -w /var/www/html -d www.example.com   # Manuel Configure SSL
 sudo certbot renew --dry-run # Automatically
 sudo systemctl status certbot.timer #Control service
 
