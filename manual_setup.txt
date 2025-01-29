@@ -64,6 +64,8 @@ sudo systemctl reload nginx  # Reload NGINX to apply changes
 
 # 🔒 4. Obtain SSL Certificate with Certbot
 sudo certbot --nginx -d example.com -d www.example.com  # Automatically configure SSL
+sudo certbot renew --dry-run # Automatically
+
 
 # 🔍 5. Verify Setup
 curl -vk https://example.com  # Test the public domain connection over HTTPS
