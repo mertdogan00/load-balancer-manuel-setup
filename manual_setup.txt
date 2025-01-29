@@ -33,6 +33,10 @@ server {
     listen 443 ssl;  
     server_name example.com www.example.com;  
 
+    # specific logs
+    access_log /var/log/nginx/example.log main;
+    error_log /var/log/nginx/example_error.log warn;
+
     # SSL Certificates (Let's Encrypt)
     ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;  
     ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;  
