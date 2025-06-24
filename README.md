@@ -50,6 +50,12 @@ server {
     listen 443 ssl;
     server_name example.com www.example.com;
 
+    # Request Limit (Optional)
+    # limit_req zone=client_limit burst=15 nodelay;
+    
+    # Bots Off (Optional)
+    # add_header X-Robots-Tag "noindex, nofollow, nosnippet, noarchive" always;
+
     ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
 
