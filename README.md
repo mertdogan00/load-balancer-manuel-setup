@@ -56,6 +56,14 @@ server {
     # Bots Off (Optional)
     # add_header X-Robots-Tag "noindex, nofollow, nosnippet, noarchive" always;
 
+    # robots.txt Special (Optional)
+    # If you want to serve robots.txt directly without proxying, enable this block.
+    # Useful if you need a visible robots.txt file for bots.
+    # Example:
+    # location = /robots.txt {
+    #     root /var/www/html;
+    # }
+
     ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
 
