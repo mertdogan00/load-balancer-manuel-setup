@@ -52,7 +52,12 @@ server {
 
     # Request Limit (Optional)
     # limit_req zone=client_limit burst=15 nodelay;
-    
+
+      # if ($limit_bypass = 0) { // for bypass (optional)
+       #  limit_req zone=client_limit burst=15 nodelay;
+       #  limit_req_status 429; # Too Many Requests
+       # }
+
     # Bots Off (Optional)
     # add_header X-Robots-Tag "noindex, nofollow, nosnippet, noarchive" always;
 
